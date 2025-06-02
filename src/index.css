@@ -1,0 +1,9 @@
+/* imported google font josefin sans in video inter */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap");
+
+* {
+  font-family: "Josefin Sans", sans-serif;
+  /* font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal; */
+}
