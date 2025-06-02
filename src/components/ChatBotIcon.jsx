@@ -3,7 +3,7 @@ import { Bot } from "lucide-react";
 
 const ChatBotIcon = () => {
   return (
-    <Bot width={50} height={50} />
+    <Bot className="bot-icon" />
     // <svg
     //   xmlns="http://www.w3.org/2000/svg"
     //   width="50"

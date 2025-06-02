@@ -1,6 +1,7 @@
 import React from "react";
 import ChatBotIcon from "./components/ChatBotIcon";
-import { ArrowDown, Send } from "lucide-react";
+import { ArrowDown, Send, ChevronDown } from "lucide-react";
+import ChatForm from "./components/ChatForm";
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
             <h2 className="logo-text">ChatBot</h2>
           </div>
           <button>
-            <ArrowDown />
+            <ChevronDown />
           </button>
         </div>
         {/* chatbot body */}
@@ -31,17 +32,7 @@ const App = () => {
 
         {/* chat-footer */}
         <div className="chat-footer">
-          <form action="#" className="chat-form">
-            <input
-              type="text"
-              placeholder="Message...."
-              className="message-input"
-              required
-            />
-            <button>
-              <Send/>   //arrowUpward
-            </button>
-          </form>
+          <ChatForm />
         </div>
       </div>
     </div>
