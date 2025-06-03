@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import ChatBotIcon from "./components/ChatBotIcon";
 import { ArrowDown, Send, ChevronDown } from "lucide-react";
 import ChatForm from "./components/ChatForm";
+import ChatMessage from "./components/ChatMessage";
 
 const App = () => {
+  const [chatHistory, setChatHistory] = useState([]);
+  // console.log(chatHistory, "chatHistory in app.jsx");
+
+  const generateBotResponse = (history) => {
+    console.log(history);
+  };
+
   return (
     <div className="container">
       <div className="chatbot-popup">
@@ -22,17 +30,23 @@ const App = () => {
           <div className="message bot-message">
             <ChatBotIcon />
             <p className="message-text">
-              Hey there bkghbhnjbhdsbkjds <br /> tye some shit
+              Hey there <br /> type some shit
             </p>
           </div>
-          <div className="message user-message">
-            <p className="message-text">bla bla bla ba</p>
-          </div>
+
+          {/* render chatHistory dynamically */}
+          {chatHistory.map((chat, index) => (
+            <ChatMessage key={index} chat={chat} />
+          ))}
         </div>
 
         {/* chat-footer */}
         <div className="chat-footer">
-          <ChatForm />
+          <ChatForm
+            chatHistory={chatHistory}
+            setChatHistory={setChatHistory}
+            generateBotResponse={generateBotResponse}
+          />
         </div>
       </div>
     </div>
